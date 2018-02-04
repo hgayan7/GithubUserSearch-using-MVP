@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.him.githubsearch.View.MainActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profileImage"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:src="@drawable/ic_launcher_background"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/followersText"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/nameText"
+        android:layout_marginLeft="72dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="76dp"
+        android:text="Followers" />
+
+    <TextView
+        android:id="@+id/followersCount"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/followersText"
+        android:layout_alignStart="@+id/followersText"
+        android:layout_below="@+id/followersText"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/publicRepo"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/followersText"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_toEndOf="@+id/followersText"
+        android:layout_toRightOf="@+id/followersText"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="Repos" />
+
+    <TextView
+        android:id="@+id/publicRepoCount"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignLeft="@+id/publicRepo"
+        android:layout_alignStart="@+id/publicRepo"
+        android:layout_below="@+id/publicRepo"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/loadButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:elevation="6dp"
+        android:onClick="load"
+        android:text="Load " />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@+id/loadButton"
+        android:layout_toLeftOf="@+id/publicRepoCount"
+        android:layout_toStartOf="@+id/publicRepoCount"
+        android:ems="10"
+        android:textColorHint="#a69a9a"
+        android:hint="Github username"
+        android:backgroundTint="#c1c0ae"
+        android:layout_marginLeft="5dp"
+        android:inputType="textPersonName" />
+
+
+</RelativeLayout>
+
