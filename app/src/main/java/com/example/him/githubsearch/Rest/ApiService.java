@@ -1,7 +1,8 @@
 package com.example.him.githubsearch.Rest;
 
 import com.example.him.githubsearch.Model.RestResponse;
-import retrofit2.Call;
+
+import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
@@ -12,6 +13,6 @@ import retrofit2.http.Path;
 public interface ApiService {
 
     @GET("users/{login}")
-    Call<RestResponse> getData(@Path("login")String userId);
+    Observable<RestResponse> getData(@Path("login")String userId);
 
 }
